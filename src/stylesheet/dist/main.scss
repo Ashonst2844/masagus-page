@@ -1,0 +1,19 @@
+@use '../base' as base;
+@use '../components' as comp;
+@use '../layouts' as layout;
+
+* {
+    @include base.reset;
+}
+
+header {
+    @include layout.sizing(100vw,comp.$nav-height);
+    @include base.flex;
+}
+nav {
+    @include comp.nav-box;
+    @include base.flex;
+}
+nav a {
+    @include comp.nav-links;
+}
