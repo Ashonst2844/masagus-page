@@ -1,27 +1,22 @@
-@use '../base/' as base;
-$nav-height: 50px;
+@use '../base' as base;
 
-@mixin nav-box {
-  width: 90%;
-  height: $nav-height;
-  background-color: black;
-  border-radius: 20px;
-  position: fixed;
-  position: absolute;
-  text-transform: uppercase;
-  box-shadow: 3px 3px 6px grey;
-  z-index: 1000;
-  opacity: 0;
+@mixin nav-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    flex-direction: column;
+    @include base.flex;
 }
-@mixin nav-links {
-  width: 100px;
-  height: 100%;
-  border-radius: inherit;
-  @include base.flex;
-  opacity: 0;
-  transform: translateY(10px);
-  &:hover {
-    background-color: lighten(base.$primary, 20%);
+@mixin links {
     width: 120px;
-  }
+    height: 30px;
+    color: base.$text;
+    text-transform: uppercase;
+    font-size: 2rem;
+    opacity: 0.6;
+    &:hover {
+        letter-spacing: 5px;
+        opacity: 1;
+        font-weight: 600;
+    }
 }

@@ -11,41 +11,58 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
+#home {
   width: 100vw;
-  height: 50px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(74, 74, 74);
+  overflow: hidden;
 }
 
-nav {
-  width: 90%;
-  height: 50px;
-  background-color: black;
-  border-radius: 20px;
-  position: fixed;
-  position: absolute;
-  text-transform: uppercase;
-  box-shadow: 3px 3px 6px grey;
-  z-index: 1000;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav a {
-  width: 100px;
+#nav {
+  width: 30%;
   height: 100%;
-  border-radius: inherit;
+  display: block;
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+#nav polygon {
+  fill: rgb(45, 43, 43);
+  position: absolute;
+}
+
+#nav-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: translateY(10px);
 }
-nav a:hover {
-  background-color: #333333;
+
+#nav-link a {
   width: 120px;
+  height: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+#nav-link a:hover {
+  letter-spacing: 5px;
+  opacity: 1;
+  font-weight: 600;
+}
+#nav-link a {
+  transform: translateX(-300px);
+}
+
+#jumbotron {
+  width: 70%;
+  height: 100%;
+  padding: 30px;
 }

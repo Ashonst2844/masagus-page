@@ -1,19 +1,39 @@
+// sass --watch src/stylesheet/dist/main.scss src/stylesheet/dist/main.css --no-source-map
+
 @use '../base' as base;
 @use '../components' as comp;
-@use '../layouts' as layout;
 
 * {
     @include base.reset;
 }
 
-header {
-    @include layout.sizing(100vw,comp.$nav-height);
+#home {
+    @include base.sizing(100vw, 100vh);
     @include base.flex;
+    background-color: base.$base;
+    overflow: hidden
 }
-nav {
-    @include comp.nav-box;
-    @include base.flex;
+
+#nav {
+    @include base.sizing(30%, 100%);
+    display: block;
+
+    transform: translateX(-300px);
+    opacity: 0;
 }
-nav a {
-    @include comp.nav-links;
+#nav polygon {
+    fill: base.$primary;
+    position: absolute;
+}
+#nav-link {
+    @include comp.nav-link;
+}
+#nav-link a {
+    @include comp.links;
+
+    transform: translateX(-300px);
+}
+#jumbotron {
+    @include base.sizing(70%, 100%);
+    padding: 30px;
 }
